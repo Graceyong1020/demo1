@@ -4,6 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mybatis="http://www.springframework.org/schema/c"
        xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xmlns:mabatis="http://mybatis.org/schema/mybatis-spring"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
     <context:component-scan
@@ -45,7 +46,8 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
-    <mybatis-spring:scan base-package="com.pgm.springdemo.mapper"/>
+    <!--<mybatis-spring:scan base-package="com.pgm.springdemo.mapper"/>-->
+    <mabatis:scan base-package="com.pgm.springdemo.mapper"/>
 
 
     <!--<bean class="com.zaxxer.hikari.HikariDataSource.pgm.springdemo.sample.SampleDAO"/>
