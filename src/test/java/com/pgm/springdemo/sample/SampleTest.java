@@ -34,7 +34,7 @@ public class SampleTest {
     private SampleDTO sampleDTO1;*/
 
     @Test
-    public void ConnectionTest() throws Exception{
+    public void ConnectionTest() throws Exception {
         Connection connection = dataSource.getConnection();
         log.info(connection);
     }
@@ -51,13 +51,12 @@ public class SampleTest {
     }
 
 
-
     @Test
     public void testSample() {
         SampleDTO dto = new SampleDTO();
         dto.setAge(20);
         dto.setName("grace");
-        String [] hobbies = {"reading", "cooking"};
+        String[] hobbies = {"reading", "cooking"};
         dto.setHobby(hobbies);
         log.info(dto);
     }
@@ -70,6 +69,7 @@ public class SampleTest {
         SampleDTO dto2 = (SampleDTO) context.getBean("sample2");
         log.info(dto2);
     }
+
     @Test
     public void testSample3() {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
