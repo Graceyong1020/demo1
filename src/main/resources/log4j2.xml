@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration status="INFO">
+<Configuration status="INFO">
     <Appenders>
-        <!-- 콜솔 -->
+        <!-- Console appender to output logs to the console -->
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout charset="UTF-8" pattern="%d{hh:mm:ss} %5p [%c] %m%n"/>
         </Console>
     </Appenders>
-    <loggers>
-        <logger name="org.springframework" level="INFO" additivity="false">
-            <appender-ref ref="console" />
-        </logger>
-        <logger name="com.pgm.springdemo" level="INFO" additivity="false">
-            <appender-ref ref="console" />
-        </logger>
-        <root level="INFO" additivity="false">
+    <Loggers>
+        <!-- Logger for Spring framework logs -->
+        <Logger name="org.springframework" level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <!-- Logger for your application logs -->
+        <Logger name="com.pgm.springdemo" level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <!-- Root logger to capture all logs -->
+        <Root level="INFO" additivity="false">
             <AppenderRef ref="console"/>
-        </root>
-    </loggers>
-</configuration>
+        </Root>
+    </Loggers>
+</Configuration>
