@@ -17,7 +17,7 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>WEB-INF/servlet-context.xml</param-value>
         </init-param>
-        <load-on-startup>1</load-on-startup>
+        <load-on-startup>1</load-on-startup> <!-- 서버가 시작될 때 이 서블릿을 로드하도록 설정 -->
     </servlet>
     
     <servlet-mapping>

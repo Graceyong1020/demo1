@@ -23,7 +23,7 @@ public class SampleController {
     @GetMapping("/ex1")
     public void ex1(@RequestParam("name") String name,
                     @RequestParam("age") int age,
-                    @RequestParam("gender") String gender, Model model) {
+                    @RequestParam("gender") String gender, Model model) {//Model : 데이터를 담아서 view 전달
         log.info("exl...");
         log.info("name:" + name);
         log.info("age:" + age);
@@ -56,6 +56,13 @@ public class SampleController {
         log.info("ex5...");
         log.info(name);
         model.addAttribute("name", name);
+    }
+    @GetMapping("/ex6")
+    public void ex6(@RequestParam("p1") String p1, @RequestParam("p2") int p2) {
+        log.info("ex6...");
+        log.info(p1);
+        log.info(p2);
+
     }
 
 }

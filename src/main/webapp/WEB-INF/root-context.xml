@@ -48,7 +48,7 @@
         <property name="mapperLocations" value="classpath:mappers/**/*.xml" />
     </bean>
 
-    <!--<mybatis-spring:scan base-package="com.pgm.springdemo.mapper"/>-->
+
     <mabatis:scan base-package="com.pgm.springdemo.mapper"/>
 
 
